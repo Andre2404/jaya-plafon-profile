@@ -8,10 +8,11 @@ const Navigation = () => {
   const navItems = [
     { label: "Beranda", href: "#home" },
     { label: "Layanan", href: "#services" },
-    { label: "Sistem Pengerjaan", href: "#workflow" },
-    { label: "Kontak", href: "#contact" },
-    { label: "FAQ", href: "#faq" },
-    { label: "Informasi", href: "#info" },
+    { label: "Plafon", href: "#plafon" },
+    { label: "Pertanyaan", href: "#faq" },
+    { label: "Lokasi", href: "#location" },
+    { label: "Kontak", href: "#kontak" },
+    { label: "Lainnya", href: "#info" },
   ];
 
   return (
@@ -19,7 +20,7 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <a href="#" className="font-playfair text-2xl font-bold text-gold-dark">
-            Jaya Plafon
+            Jaya Plafon PVC
           </a>
 
           {/* Desktop Navigation */}
@@ -28,7 +29,7 @@ const Navigation = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-gray-700 hover:text-gold transition-colors duration-300"
+                className="text-gold hover:text-gray-700 transition-colors duration-300"
               >
                 {item.label}
               </a>
