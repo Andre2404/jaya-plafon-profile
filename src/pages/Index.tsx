@@ -436,6 +436,118 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Location Section */}
+      <section id="location" className="py-16 bg-marble-light">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="font-playfair text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Lokasi Kami
+          </h2>
+          <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto mb-4">
+            Jalan Raya Kutabumi, RT 06 RW 02, Kampung Sondol, Kuta Bumi, Kecamatan Pasar Kemis, Kab.Tangerang.
+          </p>
+          <a
+            href="https://maps.app.goo.gl/wjQvRNvB36KtpVjw6"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-gold hover:bg-gold-dark text-white px-8 py-3 rounded-full font-medium transition-colors duration-300"
+          >
+            <MapPin className="w-5 h-5" />
+            Buka di Google Maps
+          </a>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section id="kontak" className="py-16 bg-gold/10">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="font-playfair text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Ingin konsultasi lebih lanjut?
+          </h2>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <a
+              href="https://wa.me/+6281318835034"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gold hover:bg-gold-dark text-white px-8 py-3 rounded-full font-medium transition-colors duration-300"
+            >
+              WhatsApp (081318835034)
+            </a>
+            <a
+              href="https://wa.me/+6288291903448"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-gold text-gold hover:bg-gold hover:text-white px-8 py-3 rounded-full font-medium transition-colors duration-300"
+            >
+              WhatsApp (088291903448)
+            </a>
+          </div>
+
+          {/* Platform Lainnya */}
+          <div className="mt-8">
+            <h3 className="text-xl font-medium text-gray-900 mb-4">
+              Kunjungi juga platform lainnya:
+            </h3>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="http://www.olx.co.id/profile/119954964"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-gold text-gold hover:bg-gold hover:text-white px-8 py-3 rounded-full font-medium transition-colors duration-300"
+              >
+                OLX
+              </a>
+              <a
+                href="https://id.carousell.com/u/jayaplafon/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-gold text-gold hover:bg-gold hover:text-white px-8 py-3 rounded-full font-medium transition-colors duration-300"
+              >
+                Carousell
+              </a>
+              <a
+                href="https://www.facebook.com/marketplace/profile/100077316346037"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-gold text-gold hover:bg-gold hover:text-white px-8 py-3 rounded-full font-medium transition-colors duration-300"
+              >
+                Facebook Marketplace
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Services */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="font-playfair text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
+            Layanan Tambahan
+          </h2>
+          <div className="max-w-2xl mx-auto bg-marble-light p-8 rounded-lg">
+            <h3 className="font-playfair text-2xl font-bold text-gray-900 mb-4">
+              Jasa Angkut Barang / Sewa Pick Up Carry
+            </h3>
+            <ul className="space-y-4 text-gray-600 mb-6">
+              <li>• Menggunakan mobil pick up curry (plat ganjil)</li>
+              <li>• Dimensi carry: 2,200 mm x 1,480 mm</li>
+              <li>• Melayani area Tangerang Raya</li>
+              <li>• Harga menyesuaikan lokasi, jarak, dan muatan</li>
+            </ul>
+            <div className="flex flex-col sm:flex-row gap-4">   
+              <a
+                href="https://wa.me/+6285175240440"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 border border-gold text-gold hover:bg-gold hover:text-white px-6 py-3 rounded-full font-medium transition-colors duration-300"
+              >
+                <Phone className="w-5 h-5" />
+                085175240440
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
