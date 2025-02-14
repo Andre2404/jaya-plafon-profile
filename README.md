@@ -1,69 +1,42 @@
-# Welcome to your Lovable project
+# Project Overview
+Proyek ini awalnya dibuat menggunakan **Lovable**, kemudian diubah dan dikustomisasi lebih lanjut agar sesuai dengan kebutuhan saya.
 
-## Project info
+## Teknologi yang Digunakan
+Proyek ini dibangun dengan teknologi berikut:
+- **Vite**
+- **TypeScript**
+- **React**
+- **shadcn-ui**
+- **Tailwind CSS**
+- **followingdotcursor** (efek kursor menggunakan NPM)
 
-**URL**: https://lovable.dev/projects/f6056f3b-efa8-4ee1-9bea-931a4c2fc873
+## Cara Mengedit dan Menyesuaikan
 
-## How can I edit this code?
+### 1️⃣ Menggunakan Lovable
+- Kunjungi [Lovable Project](https://lovable.dev/projects/f6056f3b-efa8-4ee1-9bea-931a4c2fc873).
+- Hasil generate code awal diupload ke github.
+- Semua perubahan akan otomatis dicommit ke repositori ini.
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/f6056f3b-efa8-4ee1-9bea-931a4c2fc873) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
+### 2️⃣ Menggunakan IDE Cursor dengan AI assitant 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Clone repositori
+$ git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Masuk ke direktori proyek
+$ cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependensi
+$ npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+# Jalankan server pengembangan
+$ npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### 3️⃣ Menambahkan Efek Kursor
+- Proyek ini menggunakan efek kursor **followingdotcursor**.
+- Pastikan dependensi telah diinstal dengan menjalankan:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/f6056f3b-efa8-4ee1-9bea-931a4c2fc873) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+```sh
+$ npm install followingdotcursor
+```
+sekian itu saja eksperimen pembuatan profile website yang di enhance dengan AI
