@@ -16,6 +16,7 @@ Proyek ini dibangun dengan teknologi berikut:
 - Kunjungi [Lovable Project](https://lovable.dev/projects/f6056f3b-efa8-4ee1-9bea-931a4c2fc873).
 - Hasil generate code awal diupload ke github.
 - Semua perubahan akan otomatis dicommit ke repositori ini.
+- Saya tidak mengedit kode dilovable melainkan saya pindahkan ke IDE (cursor)
 
 ### 2️⃣ Menggunakan IDE Cursor dengan AI assitant 
 ```sh
