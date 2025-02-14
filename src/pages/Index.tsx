@@ -17,6 +17,8 @@ import {
 } from "@/components/ui/dialog";
 import { title } from "process";
 
+const images = import.meta.glob('@/assets/*.{png,jpg,jpeg}', { eager: true }) as Record<string, { default: string }>;
+
 const faqItems = [
   {
     question: "Berapa lama pengerjaan plafon biasanya?",
@@ -39,7 +41,7 @@ const faqItems = [
 const Index = () => {
   useEffect(() => {
     const script = document.createElement('script');
-    script.src = "https://unpkg.com/cursor-effects@latest/dist/browser.js";
+    script.src = "https://unpkg.com/cursor-effects@l  atest/dist/browser.js";
     script.onload = () => {
       // @ts-ignore
       new cursoreffects.followingDotCursor();
@@ -152,7 +154,7 @@ const Index = () => {
                 <div className="bg-white p-6 rounded-lg hover:shadow-lg transition-all duration-300">
                   <div className="aspect-video rounded-lg overflow-hidden mb-4">
                     <img
-                      src="/public/lamiwood-1.jpg"
+                      src={images['@/assets/lamiwood-1.jpg'].default}
                       alt="Lamiwood PVC"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
@@ -171,7 +173,7 @@ const Index = () => {
                       {[1, 2, 3, 4, 5, 6].map((num) => (
                         <img
                           key={num}
-                          src={`/public/lamiwood-${num}.jpg`}
+                          src={images[`@/assets/lamiwood-${num}.jpg`].default}
                           alt={`Lamiwood Sample ${num}`}
                           className="w-full h-48 object-cover rounded-lg"
                         />
@@ -197,7 +199,7 @@ const Index = () => {
                 <div className="bg-white p-6 rounded-lg hover:shadow-lg transition-all duration-300">
                   <div className="aspect-video rounded-lg overflow-hidden mb-4">
                     <img
-                      src="/public/javafon-1.jpg"
+                      src={images['@/assets/javafon-1.jpg'].default}
                       alt="Javafon PVC"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
@@ -216,7 +218,7 @@ const Index = () => {
                       {[1, 2, 3, 4, 5, 6].map((num) => (
                         <img
                           key={num}
-                          src={`/public/javafon-${num}.jpg`}
+                          src={images[`@/assets/javafon-${num}.jpg`].default}
                           alt={`Javafon Sample ${num}`}
                           className="w-full h-48 object-cover rounded-lg"
                         />
@@ -253,7 +255,7 @@ const Index = () => {
                 <div className="bg-marble-light p-4 rounded-lg hover:shadow-lg transition-all duration-300">
                 <div className="aspect-video rounded-lg overflow-hidden mb-4">
                     <img
-                      src="/public/plafon-main.png"
+                      src={images['@/assets/plafon-main.png'].default}
                       alt="Jasa Pemasangan Plafon"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
@@ -272,7 +274,7 @@ const Index = () => {
                   <DialogDescription>
                     <div className="space-y-2 mt-2">
                     <img
-                      src="/public/plafon-main.png"
+                      src={images['@/assets/plafon-main.png'].default}
                       alt="Preview Pemasangan Plafon"
                       className="w-full h-auto rounded-lg mb-4"
                     />
@@ -290,47 +292,47 @@ const Index = () => {
               {
                 title: "Plafon Spesial",
                 description: "Plafon Motif, Drop Ceiling, LED Drop Ceiling",
-                image: "/public/plafon-special.jpeg"
+                image: "@/assets/plafon-special.jpeg"
               },
               {
                 title: "Partisi",
                 description: "Pemasangan Sekat Partisi Gypsum, GRC, dan PVC (1 muka/2 muka)",
-                image: "/public/partisi.jpg"
+                image: "@/assets/partisi.jpg"
               },
               {
                 title: "Vinyl & SPC Flooring",
                 description: "Pemasangan Vinyl dan SPC flooring",
-                image: "/public/vinyl.jpeg"
+                image: "@/assets/vinyl.jpeg"
               },
               {
                 title: "Peredam Suara",
                 description: "Pemasangan Peredam Suara (bisa request Rockwool)",
-                image: "/public/soundproof.jpg"
+                image: "@/assets/soundproof.jpg"
               },
               {
                 title: "Pembuatan Rangka Besi",
                 description: "Las Rangka Besi Rak, Lemari, Jendela, dan Lain nya",
-                image: "/public/door.jpg"
+                image: "@/assets/door.jpg"
               },
               {
                 title: "Kanopi",
                 description: "Pemasangan Kanopi/Spandek (+Bubble Aluminium peredam panas)",
-                image: "/public/canopy.jpg"
+                image: "@/assets/canopy.jpg"
               },
               {
                 title: "CCTV",
                 description: "Pemasangan CCTV (IP Camera Xiaomi C-Series)",
-                image: "/public/cctv.jpeg"
+                image: "@/assets/cctv.jpeg"
               },
               {
                 title: "Meteran PLN",
                 description: "Pengurusan Meteran PLN (NIDI dan SLO)",
-                image: "/public/pln.jpg"
+                image: "@/assets/pln.jpg"
               },
               {
                 title: "Panel Surya",
                 description: "COMING SOON",
-                image: "/public/solar.jpeg"
+                image: "@/assets/solar.jpeg"
               }
             ].map((service, index) => (
               <Dialog key={index}>
@@ -338,7 +340,7 @@ const Index = () => {
                   <div className="bg-marble-light p-6 rounded-lg hover:shadow-lg transition-all duration-300">
                     <div className="aspect-video rounded-lg overflow-hidden mb-4">
                       <img
-                        src={service.image}
+                        src={images[service.image].default}
                         alt={service.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
@@ -355,7 +357,7 @@ const Index = () => {
                     <DialogDescription>
                       <div className="space-y-4 mt-4">
                         <img
-                          src={service.image}
+                          src={images[service.image].default}
                           alt={service.title}
                           className="w-full rounded-lg"
                         />
