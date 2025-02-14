@@ -17,7 +17,7 @@ import {
 } from "@/components/ui/dialog";
 import { title } from "process";
 
-const images = import.meta.glob('@/assets/*.{png,jpg,jpeg}', { eager: true }) as Record<string, { default: string }>;
+const images = import.meta.glob('../assets/*.{png,jpg,jpeg}', { eager: true }) as Record<string, { default: string }>;
 
 const faqItems = [
   {
@@ -52,6 +52,16 @@ const Index = () => {
       document.body.removeChild(script);
     };
   }, []);
+
+  useEffect(() => {
+    console.log("Available images:", images);
+    // Coba log satu path spesifik
+    console.log("Lamiwood-1 path:", getImageUrl('../assets/lamiwood-1.jpg'));
+  }, []);
+
+  const getImageUrl = (path: string) => {
+    return images[path]?.default || '';
+  };
 
   return (
     <div className="min-h-screen bg-marble-light">
@@ -154,7 +164,7 @@ const Index = () => {
                 <div className="bg-white p-6 rounded-lg hover:shadow-lg transition-all duration-300">
                   <div className="aspect-video rounded-lg overflow-hidden mb-4">
                     <img
-                      src={images['@/assets/lamiwood-1.jpg'].default}
+                      src={getImageUrl('../assets/lamiwood-1.jpg')}
                       alt="Lamiwood PVC"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
@@ -173,7 +183,7 @@ const Index = () => {
                       {[1, 2, 3, 4, 5, 6].map((num) => (
                         <img
                           key={num}
-                          src={images[`@/assets/lamiwood-${num}.jpg`].default}
+                          src={getImageUrl(`../assets/lamiwood-${num}.jpg`)}
                           alt={`Lamiwood Sample ${num}`}
                           className="w-full h-48 object-cover rounded-lg"
                         />
@@ -199,7 +209,7 @@ const Index = () => {
                 <div className="bg-white p-6 rounded-lg hover:shadow-lg transition-all duration-300">
                   <div className="aspect-video rounded-lg overflow-hidden mb-4">
                     <img
-                      src={images['@/assets/javafon-1.jpg'].default}
+                      src={getImageUrl('../assets/javafon-1.jpg')}
                       alt="Javafon PVC"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
@@ -218,7 +228,7 @@ const Index = () => {
                       {[1, 2, 3, 4, 5, 6].map((num) => (
                         <img
                           key={num}
-                          src={images[`@/assets/javafon-${num}.jpg`].default}
+                          src={getImageUrl(`../assets/javafon-${num}.jpg`)}
                           alt={`Javafon Sample ${num}`}
                           className="w-full h-48 object-cover rounded-lg"
                         />
@@ -255,7 +265,7 @@ const Index = () => {
                 <div className="bg-marble-light p-4 rounded-lg hover:shadow-lg transition-all duration-300">
                 <div className="aspect-video rounded-lg overflow-hidden mb-4">
                     <img
-                      src={images['@/assets/plafon-main.png'].default}
+                      src={getImageUrl('../assets/plafon-main.png')}
                       alt="Jasa Pemasangan Plafon"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
@@ -274,7 +284,7 @@ const Index = () => {
                   <DialogDescription>
                     <div className="space-y-2 mt-2">
                     <img
-                      src={images['@/assets/plafon-main.png'].default}
+                      src={getImageUrl('../assets/plafon-main.png')}
                       alt="Preview Pemasangan Plafon"
                       className="w-full h-auto rounded-lg mb-4"
                     />
@@ -292,47 +302,47 @@ const Index = () => {
               {
                 title: "Plafon Spesial",
                 description: "Plafon Motif, Drop Ceiling, LED Drop Ceiling",
-                image: "@/assets/plafon-special.jpeg"
+                image: "../assets/plafon-special.jpeg"
               },
               {
                 title: "Partisi",
                 description: "Pemasangan Sekat Partisi Gypsum, GRC, dan PVC (1 muka/2 muka)",
-                image: "@/assets/partisi.jpg"
+                image: "../assets/partisi.jpg"
               },
               {
                 title: "Vinyl & SPC Flooring",
                 description: "Pemasangan Vinyl dan SPC flooring",
-                image: "@/assets/vinyl.jpeg"
+                image: "../assets/vinyl.jpeg"
               },
               {
                 title: "Peredam Suara",
                 description: "Pemasangan Peredam Suara (bisa request Rockwool)",
-                image: "@/assets/soundproof.jpg"
+                image: "../assets/soundproof.jpg"
               },
               {
                 title: "Pembuatan Rangka Besi",
                 description: "Las Rangka Besi Rak, Lemari, Jendela, dan Lain nya",
-                image: "@/assets/door.jpg"
+                image: "../assets/door.jpg"
               },
               {
                 title: "Kanopi",
                 description: "Pemasangan Kanopi/Spandek (+Bubble Aluminium peredam panas)",
-                image: "@/assets/canopy.jpg"
+                image: "../assets/canopy.jpg"
               },
               {
                 title: "CCTV",
                 description: "Pemasangan CCTV (IP Camera Xiaomi C-Series)",
-                image: "@/assets/cctv.jpeg"
+                image: "../assets/cctv.jpeg"
               },
               {
                 title: "Meteran PLN",
                 description: "Pengurusan Meteran PLN (NIDI dan SLO)",
-                image: "@/assets/pln.jpg"
+                image: "../assets/pln.jpg"
               },
               {
                 title: "Panel Surya",
                 description: "COMING SOON",
-                image: "@/assets/solar.jpeg"
+                image: "../assets/solar.jpeg"
               }
             ].map((service, index) => (
               <Dialog key={index}>
@@ -340,7 +350,7 @@ const Index = () => {
                   <div className="bg-marble-light p-6 rounded-lg hover:shadow-lg transition-all duration-300">
                     <div className="aspect-video rounded-lg overflow-hidden mb-4">
                       <img
-                        src={images[service.image].default}
+                        src={getImageUrl(service.image)}
                         alt={service.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
@@ -357,7 +367,7 @@ const Index = () => {
                     <DialogDescription>
                       <div className="space-y-4 mt-4">
                         <img
-                          src={images[service.image].default}
+                          src={getImageUrl(service.image)}
                           alt={service.title}
                           className="w-full rounded-lg"
                         />
@@ -423,118 +433,6 @@ const Index = () => {
                 </AccordionItem>
               ))}
             </Accordion>
-          </div>
-        </div>
-      </section>
-
-      {/* Location Section */}
-      <section id="location" className="py-16 bg-marble-light">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="font-playfair text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Lokasi Kami
-          </h2>
-          <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto mb-4">
-            Jalan Raya Kutabumi, RT 06 RW 02, Kampung Sondol, Kuta Bumi, Kecamatan Pasar Kemis, Kab.Tangerang.
-          </p>
-          <a
-            href="https://maps.app.goo.gl/wjQvRNvB36KtpVjw6"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-gold hover:bg-gold-dark text-white px-8 py-3 rounded-full font-medium transition-colors duration-300"
-          >
-            <MapPin className="w-5 h-5" />
-            Buka di Google Maps
-          </a>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section id="kontak" className="py-16 bg-gold/10">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="font-playfair text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Ingin konsultasi lebih lanjut?
-          </h2>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <a
-              href="https://wa.me/+6281318835034"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gold hover:bg-gold-dark text-white px-8 py-3 rounded-full font-medium transition-colors duration-300"
-            >
-              WhatsApp (081318835034)
-            </a>
-            <a
-              href="https://wa.me/+6288291903448"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border border-gold text-gold hover:bg-gold hover:text-white px-8 py-3 rounded-full font-medium transition-colors duration-300"
-            >
-              WhatsApp (088291903448)
-            </a>
-          </div>
-
-          {/* Platform Lainnya */}
-          <div className="mt-8">
-            <h3 className="text-xl font-medium text-gray-900 mb-4">
-              Kunjungi juga platform lainnya:
-            </h3>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="http://www.olx.co.id/profile/119954964"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border border-gold text-gold hover:bg-gold hover:text-white px-8 py-3 rounded-full font-medium transition-colors duration-300"
-              >
-                OLX
-              </a>
-              <a
-                href="https://id.carousell.com/u/jayaplafon/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border border-gold text-gold hover:bg-gold hover:text-white px-8 py-3 rounded-full font-medium transition-colors duration-300"
-              >
-                Carousell
-              </a>
-              <a
-                href="https://www.facebook.com/marketplace/profile/100077316346037"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border border-gold text-gold hover:bg-gold hover:text-white px-8 py-3 rounded-full font-medium transition-colors duration-300"
-              >
-                Facebook Marketplace
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Additional Services */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="font-playfair text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
-            Layanan Tambahan
-          </h2>
-          <div className="max-w-2xl mx-auto bg-marble-light p-8 rounded-lg">
-            <h3 className="font-playfair text-2xl font-bold text-gray-900 mb-4">
-              Jasa Angkut Barang / Sewa Pick Up Carry
-            </h3>
-            <ul className="space-y-4 text-gray-600 mb-6">
-              <li>• Menggunakan mobil pick up curry (plat ganjil)</li>
-              <li>• Dimensi carry: 2,200 mm x 1,480 mm</li>
-              <li>• Melayani area Tangerang Raya</li>
-              <li>• Harga menyesuaikan lokasi, jarak, dan muatan</li>
-            </ul>
-            <div className="flex flex-col sm:flex-row gap-4">   
-              <a
-                href="https://wa.me/+6285175240440"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 border border-gold text-gold hover:bg-gold hover:text-white px-6 py-3 rounded-full font-medium transition-colors duration-300"
-              >
-                <Phone className="w-5 h-5" />
-                085175240440
-              </a>
-            </div>
           </div>
         </div>
       </section>
