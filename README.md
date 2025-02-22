@@ -1,43 +1,39 @@
 # Project Overview
-Proyek ini awalnya dibuat menggunakan **Lovable**, kemudian diubah dan dikustomisasi lebih lanjut agar sesuai dengan kebutuhan saya.
+This project was initially created using **Lovable**, and then further customized to meet my specific needs.
 
-## Teknologi yang Digunakan
-Proyek ini dibangun dengan teknologi berikut:
+## Architecture
+The tech stack includes:
 - **Vite**
 - **TypeScript**
 - **React**
 - **shadcn-ui**
 - **Tailwind CSS**
-- **followingdotcursor** (efek kursor menggunakan NPM)
+- **followingdotcursor** (cursor effect using NPM)
 
-## Cara Mengedit dan Menyesuaikan
+## How to Edit and Customize
+### 1️⃣ Using Lovable
+- Visit the [Lovable Project](https://lovable.dev/projects/f6056f3b-efa8-4ee1-9bea-931a4c2fc873).
+- The initial generated code is uploaded to GitHub.
+- All changes are automatically committed to this repository.
+- I did not edit the code in Lovable but instead moved it to an IDE (Cursor).
 
-### 1️⃣ Menggunakan Lovable
-- Kunjungi [Lovable Project](https://lovable.dev/projects/f6056f3b-efa8-4ee1-9bea-931a4c2fc873).
-- Hasil generate code awal diupload ke github.
-- Semua perubahan akan otomatis dicommit ke repositori ini.
-- Saya tidak mengedit kode dilovable melainkan saya pindahkan ke IDE (cursor)
-
-### 2️⃣ Menggunakan IDE Cursor dengan AI assitant 
+### 2️⃣ Using the Cursor IDE with AI Assistant
 ```sh
-# Clone repositori
+# Clone the repository
 $ git clone <YOUR_GIT_URL>
-
-# Masuk ke direktori proyek
+# Navigate to the project directory
 $ cd <YOUR_PROJECT_NAME>
-
-# Install dependensi
+# Install dependencies
 $ npm install
-
-# Jalankan server pengembangan
+# Run the development server
 $ npm run dev
 ```
 
-### 3️⃣ Menambahkan Efek Kursor
-- Proyek ini menggunakan efek kursor **followingdotcursor**.
-- Pastikan dependensi telah diinstal dengan menjalankan:
-
+### 3️⃣ Adding Cursor Effects
+- This project uses the **followingdotcursor** cursor effect.
+- Ensure the dependency is installed by running:
 ```sh
 $ npm install followingdotcursor
 ```
-sekian itu saja eksperimen pembuatan profile website yang di enhance dengan AI
+
+That's all! This is an experiment in creating a profile website enhanced with AI.
