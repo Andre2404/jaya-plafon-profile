@@ -37,3 +37,6 @@ $ npm install followingdotcursor
 ```
 
 That's all! This is an experiment in creating a profile website enhanced with AI.
+
+Result :
+https://jayaplafonpvc.netlify.app/
